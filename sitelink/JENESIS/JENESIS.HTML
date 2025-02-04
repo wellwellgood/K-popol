@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+    <meta http-equiv="Content-Type" content="charset=UTF-8;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제네시스</title>
+    <link rel="stylesheet" href="web.css">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+    <body>
+        <header>
+        <div class="navigation">
+            <div class="logo">
+                <a href=""><img src="logo.png" alt=""></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">모델</a></li>
+                    <li><a href="#">구매</a></li>
+                    <li><a href="#">체험</a></li>
+                    <li><a href="#">멤버스</a></li>
+                    <li><a href="#">제네시스</a></li>
+                </ul>
+            </div>
+            <div class="util-nav">
+                <div class="util-about">
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">마이 페이지</a></li>
+                    </ul>
+                </div>
+                <div class="util-serch">
+                    <button><img src="img/icon-search-small.png"></button>
+                </div>
+                <div class="util-menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        </header>
+        <div class="navmenu">
+            <div class="menu">
+            <img src="img/logo.png" alt="" id="img1">
+                <div class="serch">
+                    <input type="text" placeholder="검색어를 입력해주세요." style="opacity: 1;" autofocus=""><button class="button1"><img src="img/icon-search-small.png" alt=""></button>
+                </div>
+                <div class="text-menu">
+                <ul>
+                    <h2>모델</h2>
+                    <li>G90 Black</li>
+                    <li>G90 Long Wheel Base</li>
+                    <li>G90</li>
+                    <li>G80</li>
+                    <li>Electrifed G80</li>
+                    <li>G70</li>
+                    <li>G70 Shooting Brake</li>
+                    <li>GV80</li>
+                    <li>GV80 Coupe</li>
+                    <li>GV70</li>
+                    <li>Electrifed GV70</li>
+                    <li>GV60</li>
+                    <li>콘셉트카 소개</li>
+                </ul>
+                <ul>
+                    <h2>구매</h2>
+                    <li>견적내기</li>
+                    <li>전기차 구매가이드</li>
+                    <li>구매상담신청</li>
+                    <li>제네시스 스펙트럼</li>
+                    <li>사양 조회하기</li>
+                </ul>
+                <ul>
+                    <h2>체험</h2>
+                    <li>스페이스</li>
+                    <li>시승 신청</li>
+                    <li>전시장 찾기</li>
+                    <li>제네시스 드라이빙 익스피리언스</li>
+                </ul>
+                <ul>
+                    <h2>멤버스</h2>
+                    <li>제네시스 멤버스</li>
+                    <li>MY GRNESIS 앱</li>
+                    <li>테크놀로지</li>
+                    <li>차량관리 서비스</li>
+                </ul>
+                <ul>
+                    <h2>제네시스</h2>
+                    <li>브랜드</li>
+                    <li>제네시스X골프</li>
+                    <li>모터쇼</li>
+                    <li>로드트립</li>
+                </ul>
+                <ul>
+                    <h2>고객센터</h2>
+                    <li>고객센터 안내</li>
+                    <li>공지사항</li>
+                    <li>이벤트</li>
+                    <li>자주 묻는 질문</li>
+                    <li>다운로드 센터</li>
+                </ul>
+                <ul>
+                    <h2>마이페이지</h2>
+                </ul>
+                </div>
+            </div>
+            <div class="footlist">
+                <div class="list">
+                    <ul>
+                        <img src="img/ico-new-window.png" alt="" style="height: 12px;"><li>가격표 다운로드</li>
+                        <img src="img/ico-new-window.png" alt="" style="height: 12px;"><li>네비게이션 업데이트</li>
+                        <img src="img/ico-new-window.png" alt="" style="height: 12px;"><li>제네시스 부티크</li>
+                        <img src="img/ico-worldwide.png" alt="" style="height: 12px;"><li>제네시스 월드와이즈</li>
+                    </ul>
+                </div>
+                <div class="language">
+                    <div class="button2">
+                        <button>ENG</button><button>KOR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="box1"></div>
+        <button class="more"><a href=""></a>더 알아보기&gt;</button>
+        <!-- LINK => <a href="dot.html"></a> -->
+        <section id="sliderType03">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                    <div class="text">
+                        <h3 class="brand">GENESIS</h3>
+                        <h2 class="carname">
+                            X GRAN BERLINETTA |
+                            <br>
+                            X GRAN RACER CONCEPT
+                        </h2>
+                    </div>
+                        <div class="slider">
+                            <img src="img/genesis-consept-car.jpg" alt="이미지6" style="background-position: center; background-size: cover;">
+                        </div>
+                        <div class="slider">
+                            <img src="img/genesis-g80.jpg" id="이미지7">
+                        </div>
+                        <div class="slider">
+                            <img src="img/genesis-g90-black.jpg" id="이미지8">
+                        </div>
+                        <div class="slider">
+                            <img src="img/genesis-g90-long-wheel-base.jpg" id="이미지9">
+                        </div>
+                        <div class="slider">
+                            <img src="img/genesis-Gconcept.jpg" id="이미지10">
+                        </div>
+                        <div class="slider">
+                            <img src="img/genesis-Gv70.jpg" id="이미지11">
+                        </div>
+                        <div class="slider">
+                            <img src="img/genesis-magna.jpg" id="이미지12">
+                        </div>
+                    </div>
+                    <div class="dot">
+                        <button><a href="#이미지6"></a>이미지</button>
+                        <button><a href="#이미지7"></a>이미지</button>
+                        <button><a href="#이미지8"></a>이미지</button>
+                        <button><a href="#이미지9"></a>이미지</button>
+                        <button><a href="#이미지10"></a>이미지</button>
+                        <button><a href="#이미지11"></a>이미지</button>
+                        <button><a href="#이미지12"></a>이미지</button>
+                        <button class="btn"><span href="playpause"></span>playpause</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="ourmodel">
+        <div class="model">
+            <div class="text">
+            <h2>OUR MODELS</h2>
+            <span>역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.</span>
+            </div>
+            <div class="sectionbox">
+                <div class="sectionwrap">
+                    <a href="#" class="placeholder">
+                        <span>ALL</span>
+                    </a>
+                </div>
+                <div class="section-option" style="display: none;">
+                    <ul role="section">
+                        <li role="option"><a href="#">ALL</a></li>
+                        <li role="option"><a href="#">BLACK</a></li>
+                        <li role="option"><a href="#">SEDAN</a></li>
+                        <li role="option"><a href="#">SUV</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="model3">
+                <div class="G90MODEL">
+                    <div class="brand-title">
+                        <h3>G90 BLACK</h3>
+                        <span class="badge"><img src="img/new_50x24.png" alt=""></span>
+                    </div>
+                    <img src="img/G90 black.png" alt="">
+                    <div class="view"><a href="#"></a>자세히보기</div>
+                </div>
+                <div class="G90LWB">
+                    <div class="trim">
+                        <h3>G90 <br>LONG WHEEL BASE</h3>
+                    </div>
+                    <img src="img/G90 LWB.png" alt="">
+                    <div class="view"><a href="web.html#"></a>자세히보기</div>
+                </div>
+                <div class="G90">
+                    <div class="trim"><h3>G90</h3></div>
+                    <img src="img/G90.png" alt="">
+                    <div class="view"><a href="web.html#"></a>자세히보기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="iconbg">
+        <div class="icon">
+            <div class="inner">
+                <ul class="list1">
+                    <li class="item">
+                        <a href="#">
+                            <div class="iconhover">
+                            <img src="img/Build-And-Price_black_60x60_hover.gif" alt="" id="imggif1">
+                            <div class="icontext">
+                                <em class="title">견적내기</em>
+                            </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="iconhover">
+                            <img src="img/Price_black_60x60_hover.gif" alt="">
+                            <div class="icontext">
+                                <em class="title">구매상담신청</em>
+                            </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="iconhover">
+                            <img src="img/Book-a-Test-Drive_black_60x60_hover.gif" alt="">
+                            <div class="icontext">
+                                <em class="title">시승 신청</em>
+                            </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="l#">
+                            <div class="iconhover">
+                            <img src="img/Download-E-Brochure_black_60x60_hover.gif" alt="">
+                            <div class="icontext">
+                                <em class="title">카탈로그</em>
+                            </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="imglink">
+        <section tabindex="0">
+            <div class="layout">
+                <div class="linkinner">
+                    <ul class="list">
+                        <li class="item1">
+                            <div class="iteminner">
+                                <div class="imglink1">
+                                    <div class="picture">
+                                        <img src="img/전시장제네시스.jpg" alt="제네시스 스페이스 이미지" class="is-active">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="contentinner">
+                                    <strong class="eltitle">
+                                        <span class="display">스페이스</span>
+                                    </strong>
+                                    <p class="eldesc">
+                                        제네시스의 디자인과 고유한 감각을 반영한 &nbsp; 현대적 공간으로 여러분을 초대합니다.&nbsp; 제네시스에 관한 다양한 체험으로 당신만의 제네시스를 찾는 여정을 지원합니다.
+                                    </p>
+                                    <a href="#" class="view1">
+                                        <span>
+                                            자세히보기
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="iteminner">
+                                <div class="imglink1">
+                                    <div class="picture">
+                                        <img data-media="(min-width 1024px)" src="img/해변의제네시스.jpg" alt="해변의 제네시스 차량 이미지" class="is-active">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="contentinner">
+                                    <strong class="eltitle">
+                                        <span class="display">로드트립</span>
+                                    </strong>
+                                    <p class="eldesc">
+                                        제네시스와 내셔널지오그래픽 트래블러와 함께하는 서사적 여행, 제네시스 로드트립을 통해 자세한 정보를 확인하세요.
+                                    </p>
+                                    <a href="#" class="view1">
+                                        <span>
+                                            자세히보기
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="modulinner">
+        <div class="modulimg">
+            <div class="bgis-active">
+                <div class="imgbg">
+                    <p class="ir">제네시스 차량과 여행 이미지</p>
+                </div>
+            </div>
+        </div>
+        <div class="modulcontent">
+            <div class="modulcontentinner">
+                <div class="modulcontenttitle" style="opacity: 1;">
+                    <h2 class="eltitle">
+                        <span>Genesis Events</span>
+                    </h2>
+                </div>
+                <div class="subtitle" style="opacity: 1;">
+                    <strong class="sub-title">
+                        <span>제네시스에서 진행중인 다양한 이벤트를 소개합니다.</span>
+                    </strong>
+                </div>
+            <div class="modulevent">
+                <a href="#" class="modultext">
+                    <span class="text1">이벤트 보기</span>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="parbase">
+        <div class="parbasespace">
+            <div class="directioncontainer">
+                <div class="containerinner">
+                    <div class="parbasetitle">
+                        <h2 class="title4">연관콘텐츠</h2>
+                    </div>
+                    <div class="content1">
+                        <div class="contentitem">
+                            <div class="itenwrap">
+                                <div class="containeritem">
+                                    <div class="itemimg">
+                                        <img src="img/parbase1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="itemdesc">
+                                    <div class="itemtitle">
+                                        <strong>이벤트</strong>
+                                    </div>
+                                    <div class="itemtext">
+                                        <p>제네시스에서 진행중인 다양한 이벤트 정보를 전해 드립니다.</p>
+                                    </div>
+                                    <div class="itemcta">
+                                        <a href="#" class="itemctatext">
+                                            <span>자세히보기</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itenwrap">
+                                <div class="containeritem">
+                                    <div class="itemimg">
+                                        <img src="img/parbase2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="itemdesc">
+                                    <div class="itemtitle">
+                                        <strong>MY GENESIS 앱</strong>
+                                    </div>
+                                    <div class="itemtext">
+                                        <p>제네시스 고객님의 일상에 편의를 더해줄 MY GENESIS 앱과 함께 하세요.</p>
+                                    </div>
+                                    <div class="itemcta">
+                                        <a href="#" class="itemctatext">
+                                            <span>자세히보기</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itenwrap">
+                                <div class="containeritem">
+                                    <div class="itemimg">
+                                        <img src="img/parbase3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="itemdesc">
+                                    <div class="itemtitle">
+                                        <strong>맴버스</strong>
+                                    </div>
+                                    <div class="itemtext">
+                                        <p>제네시스 오너분들께만 주어지는 특별한 혜택과 이상적인 경험을 선사합니다.</p>
+                                    </div>
+                                    <div class="itemcta">
+                                        <a href="#" class="itemctatext">
+                                            <span>자세히보기</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="DownloadAPP">
+        <div class="typelight">
+            <section tabindex="0">
+                <div class="DownloadAPPbody">
+                    <div class="APPinner">
+                        <div class="APPtitle">
+                            <em>MY GENESIS APP 다운로드</em>
+                        </div>
+                        <div class="APPwrap">
+                            <a href="#" class="shop">
+                                <span>Google Play</span>
+                            </a>
+                            <a href="#" class="shop">
+                                <span>App Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="footer1">
+        <div class="sharebtn">
+            <div class="svgicon">
+                <span class="share">share</span>
+                <li class="presentation">
+                    <a href="#">
+                        <span class="js-svg-icon" data-icon="svg-facebook" data-load="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 48 48"><path class="cls" d="M22,36H26.5V25.5H31V21H26.5V18a1.43,1.43,0,0,1,1.33-1.5H31V12H27.25A5.32,5.32,0,0,0,22,17.25V21H19v4.5h3Z"></path></svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="presentation">
+                    <a href="#">
+                        <span class="js-svg-icon"  data-icon="svg-twitter" data-load="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 60 60">
+                                <path class="cls" d="m35.71,25.41L58.05,0h-5.29s-19.41,22.06-19.41,22.06L17.87,0H0s23.43,33.36,23.43,33.36L0,60h5.29s20.48-23.3,20.48-23.3l16.36,23.3h17.87s-24.29-34.59-24.29-34.59Zm-7.25,8.24l-2.38-3.32L7.2,3.9h8.13s15.24,21.33,15.24,21.33l2.37,3.32,19.81,27.73h-8.13s-16.16-22.64-16.16-22.64Z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="presentation">
+                    <a href="#">
+                        <span class="ico-util-url"></span>
+                        <span class="blind">URL</span>
+                    </a>
+                </li>
+            </div>
+            <div class="topbtn">
+                top
+            </div>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="paragraph">
+            <div class="notic">
+                <span>[공지사항]</span>
+            </div>
+            <div class="lineclass">
+                <div class="oneline">
+                    <p>제네시스 멤버십 제휴서비스 종료 안내 (폴 바셋)</p>
+                </div>
+                <div class="oneline">
+                    <p>제네시스 멤버십 제휴서비스 점검 일정 공지 (메가박스)</p>
+                </div>
+                <div class="oneline">
+                    <p>제네시스 커넥티드 서비스 시스템 개선 작업 안내</p>
+                </div>
+                <div class="oneline">
+                    <p>Genesis Connected Services 이용약관 개정 공지</p>
+                </div>
+                <div class="oneline">
+                    <p>제네시스 멤버십 제휴서비스 종료 안내 (폴 바셋)</p>
+                </div>
+            </div>
+        </div>
+        <div class="noticbtn">
+            <img src="img/prev.png" alt="이전">
+            <img src="img/play.png" alt="재생">
+            <img src="img/prev.png" alt="다음">
+        </div>
+    </div>
+    <div class="footer3">
+        <div class="sitemap">
+            <div class="text-menu">
+                <ul>
+                    <h2>모델</h2>
+                    <li>G90 Black</li>
+                    <li>G90 Long Wheel Base</li>
+                    <li>G90</li>
+                    <li>G80</li>
+                    <li>Electrifed G80</li>
+                    <li>G70</li>
+                    <li>G70 Shooting Brake</li>
+                    <li>GV80</li>
+                    <li>GV80 Coupe</li>
+                    <li>GV70</li>
+                    <li>Electrifed GV70</li>
+                    <li>GV60</li>
+                    <li>콘셉트카 소개</li>
+                </ul>
+                <ul>
+                    <h2>구매</h2>
+                    <li>견적내기</li>
+                    <li>전기차 구매가이드</li>
+                    <li>구매상담신청</li>
+                    <li>제네시스 스펙트럼</li>
+                    <li>사양 조회하기</li>
+                </ul>
+                <ul>
+                    <h2>체험</h2>
+                    <li>스페이스</li>
+                    <li>시승 신청</li>
+                    <li>전시장 찾기</li>
+                    <li>제네시스 드라이빙 익스피리언스</li>
+                </ul>
+                <ul>
+                    <h2>멤버스</h2>
+                    <li>제네시스 멤버스</li>
+                    <li>MY GRNESIS 앱</li>
+                    <li>테크놀로지</li>
+                    <li>차량관리 서비스</li>
+                </ul>
+                <ul>
+                    <h2>제네시스</h2>
+                    <li>브랜드</li>
+                    <li>제네시스X골프</li>
+                    <li>모터쇼</li>
+                    <li>로드트립</li>
+                </ul>
+                <ul>
+                    <h2>고객센터</h2>
+                    <li>고객센터 안내</li>
+                    <li>공지사항</li>
+                    <li>이벤트</li>
+                    <li>자주 묻는 질문</li>
+                    <li>다운로드 센터</li>
+                </ul>
+                <ul>
+                    <h2>마이페이지</h2>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer4">
+        <div class="gotosite">
+            <div class="sitemap1">
+                <ul class="sitemapList">
+                    <li class="site">
+                        <a href="">사이트맵</a>
+                    </li>
+                    <li class="site">
+                        <a href="">이용약관</a>
+                    </li>
+                    <li class="site">
+                        <a href="" style="color: #c36f51;">개인정보 처리방침</a>
+                    </li>
+                    <li class="site">
+                        <a href="">저작권 안내</a>
+                    </li>
+                    <li class="site">
+                        <a href="">보증안내</a>
+                    </li>
+                    <li class="site">
+                        <a href="">자동차 교환 및 환불 중재 규정 안내</a>
+                    </li>
+                    <li class="site">
+                        <a href="">하자 재발 통보 안내</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gotoSNS">
+                <ul class="SNSicon">
+                    <span class="js-svg-icon" data-icon="svg-facebook" data-load="true"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 48 48"><path d="M22,36H26.5V25.5H31V21H26.5V18a1.43,1.43,0,0,1,1.33-1.5H31V12H27.25A5.32,5.32,0,0,0,22,17.25V21H19v4.5h3Z"></path></svg></span>
+                    <span class="js-svg-icon" data-icon="svg-instagram" data-load="true"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 48 48"><circle cx="24" cy="24" r="4"></circle><path d="M35.93 19.05a9.27 9.27 0 0 0-.56-2.9 6.1 6.1 0 0 0-3.51-3.51 8.5 8.5 0 0 0-2.86-.56C27.67 12 27.26 12 24 12s-3.67 0-4.95.08a8.53 8.53 0 0 0-2.91.55A5.86 5.86 0 0 0 14 14a6 6 0 0 0-1.39 2.11 8.89 8.89 0 0 0-.55 2.89C12 20.3 12 20.7 12 24s0 3.66.08 4.95a8.72 8.72 0 0 0 .55 2.9A5.81 5.81 0 0 0 14 34a6.15 6.15 0 0 0 2.12 1.39A9.1 9.1 0 0 0 19 36c1.28.06 1.68.07 5 .07s3.7-.07 5-.07a9.1 9.1 0 0 0 2.92-.55A5.93 5.93 0 0 0 34 34a6 6 0 0 0 1.39-2.13 9.13 9.13 0 0 0 .55-2.87c.06-1.34.06-1.74.06-5s0-3.66-.07-4.95zM24 30.16A6.16 6.16 0 1 1 30.16 24 6.16 6.16 0 0 1 24 30.16zM30.41 19a1.44 1.44 0 1 1 1.44-1.44A1.43 1.43 0 0 1 30.41 19z"></path></svg></span>
+                    <span class="js-svg-icon" data-icon="svg-youtube" data-load="true"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 48 48"><path d="M38.74 18a6.53 6.53 0 0 0-1.2-3 4.27 4.27 0 0 0-3-1.28c-4.22-.3-10.54-.3-10.54-.3s-6.27 0-10.52.31a4.27 4.27 0 0 0-3 1.28 6.53 6.53 0 0 0-1.2 3A46.46 46.46 0 0 0 9 22.86v2.28A46.59 46.59 0 0 0 9.27 30a6.55 6.55 0 0 0 1.2 3 5 5 0 0 0 3.34 1.28c2.4.23 10.19.31 10.19.31s6.32 0 10.53-.32a4.3 4.3 0 0 0 3-1.27 6.55 6.55 0 0 0 1.2-3 46.59 46.59 0 0 0 .27-4.86v-2.28a46.46 46.46 0 0 0-.26-4.86zm-17.88 9.92v-8.47L29 23.69z"></path></svg></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer5">
+        <div class="morebtn">
+            <div class="btnfamily">
+                <ul class="btnfamilyList">
+                    <li class="#"><span class="worldwise">제네시스 월드와이즈</span></li>
+                    <li class="#"><span class="privacycenter">프라이버시 센터</span></li>
+                    <li class="#"><span class="newwindow">제네시스 부티크</span></li>
+                    <li class="#"><span class="newwindow">네비게이션 업데이트</span></li>
+                    <li class="#"><span class="newwindow">제네시스 드라이빙 아카데미</span></li>
+                    <li class="#"><span class="newwindow">윤리경영 사이버 감사실</span></li>
+                    <li class="#"><span class="newwindow">인재 채용</span></li>
+                </ul>
+            </div>
+            <div class="langbtn">
+                <button class="btn1">ENG</button>
+                <button class="btn2">KOR</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer6">
+        <img src="img/logo.png" alt="">
+    </div>
+</body>
+<script src="web.js"></script>
+</html>

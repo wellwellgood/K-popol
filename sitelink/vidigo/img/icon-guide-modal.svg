@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12">
+    <g data-name="빼기 32" style="fill:#f5f5f5;stroke-linejoin:bevel">
+        <path d="M9.5 10.913 5.753 7.699l-.427-.366L5 7.053l-.325.28-.427.366L.501 10.91.5.5h9v10.413z" style="stroke:none"/>
+        <path d="M9 9.825V1H1l.001 8.823 3.348-2.87h1.303L9 9.825M10 12 9.998 12 5 7.712l-.426.366-4.572 3.92L0 .5C0 .224.224 0 .5 0h9a.5.5 0 0 1 .5.5V12z" style="fill:#f5f5f5;stroke:none"/>
+    </g>
+</svg>

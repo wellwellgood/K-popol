@@ -1,0 +1,243 @@
+/* ------------------------------ 480 ------------------------------------> */
+@media (max-width: 480px) {
+    .header .inner a img{
+        width: 90%;
+    }
+}
+/* ------------------------------ 550 ------------------------------------> */
+@media (max-width:550px){
+    .form-wrap{
+        gap: 5px;
+    }
+    .form-wrap .wrap-box{
+        padding: 5px 5px;
+        border: 2px solid #90561F;
+    }
+    .form-wrap .search-btn{
+        gap: 5px;
+    }
+    .counter-wrap{
+        gap: 20px;
+    }
+    .form-wrap .wrap-box .select{
+        height: 30px;
+        line-height: 30px;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+    .select_mate{
+        font-size: 13px;
+        min-width: 100px;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .form-wrap .wrap-box select{
+        height: 30px;
+    }
+    .form-wrap .wrap-box .select::after{
+        top: 5px;
+    }
+    .selecionado_opcion{
+        padding: 7px 5%;
+    }
+    .icon_select_mate{
+        top: 3px;
+    }
+    .input input{
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+    }
+    .form-wrap .wrap-box .input{
+        width: 400px;
+    }
+    .counter-wrap div span{
+        font-size: 15px;
+    }
+    .counter-wrap div strong{
+        font-size: 25px;
+    }
+    .quick-wrap{
+        gap: 20px;
+    }
+}
+/* ------------------------------ 684 ------------------------------------> */
+@media (max-width: 684px) {
+    .header .inner a img{
+        width: 90%;
+    }
+    .header .inner .top-btn a .ic-about{
+        width: 40px;
+        height: 40px;
+        margin-top: 0;
+    }
+    .header .inner .ri-menu-fill{
+        font-size: 40px;
+    }
+    .inner{
+        gap: 30px;
+    }
+    .form-wrap .wrap-box {
+        gap: 10px;
+        border-radius: 15px;
+    }
+    .select_mate{
+        font-size: 15px;
+    }
+    .form-wrap .wrap-box .input{
+        width: 200px;
+    }
+    .keyword{
+        display: none;
+    }
+    .counter-wrap{
+        width: 100%;
+        gap: 50px;
+    }
+    .third .inner{
+        gap: 20px;
+    }
+    .third .title-wrap h2{
+        font-size: 20px;
+    }
+    .third .title-wrap p{
+        display: none;
+    }
+    .third .collection-box a{
+        gap: 20px;
+    }
+    .inner .btn-wrap .swiper-button-next,
+    .inner .btn-wrap .swiper-button-prev{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #333;
+    }
+    .inner .btn-wrap .swiper-button-next::after,
+    .inner .btn-wrap .swiper-button-prev::after{
+        font-size: 13px;
+    }
+    .inner .btn-wrap{
+        height: 50px;
+    }
+    .more-wrap.modile{
+        font-size: 13px;
+    }
+}
+/* ------------------------------ 800 ------------------------------------> */
+@media (max-width : 800px) {
+    .inner{
+        gap: 60px;
+    }
+}
+/* ------------------------------ 900 ------------------------------------> */
+@media (max-width : 900px) {
+    .select_mate{
+        min-width: 150px;
+        width: 150px;
+    }
+}
+/* ------------------------------ 1000 ------------------------------------> */
+@media (max-width: 1000px) {
+    .header .inner{
+        padding-top: 20px;
+    }
+    .inner{
+        padding: 0 4%;
+    }
+}
+/* ------------------------------ 1024 ------------------------------------> */
+@media (max-width: 1024px) {
+    .form-wrap .wrap-box .input{
+        width: 200px;
+    }
+    .fourth .notice{
+        width: 100%;
+    }
+    .fourth .inner .about{
+        display: none;
+    }
+    .third .inner{
+        flex-direction: column;
+    }
+    .third .title-wrap{
+        width: 100%;
+        text-align: center;
+    }
+    .third .colletion{
+        width: 100%;
+    }
+    .third .title-wrap .more-wrap.pc{
+        display: none;
+    }
+    .inner .btn-wrap{
+        position: relative;
+        left: 0;
+        height: 65px;
+        bottom: 0;
+    }
+}
+/* ------------------------------ 1200 ------------------------------------> */
+@media (max-width: 1200px) {
+    .counter-wrap{
+        width: 100%;
+        padding: 30px 0;
+        gap: 80px;
+    }
+    .quick-wrap{
+        width: 90%;
+    }
+    .contents{
+        width: 90%;
+    }
+    .third .collection-box a{
+        padding: 20px;
+    }
+    .inner .btn-wrap{
+        left: 40%;
+        bottom: -20%;
+    }
+    .fourth .wrap-title{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .fourth .wrap-title p{
+        font-size: 15px;
+        padding-top: 0;
+    }
+    .fourth .notice .more-wrap{
+        text-align: center;
+    }
+}
+/* ------------------------------ 1300 ------------------------------------> */
+@media (max-width: 1300px) {
+    .fourth .wrap-title h2{
+        font-size: 35px;
+    }
+}
+/* ------------------------------ 1920 ------------------------------------> */
+@media (max-width: 1920px) {
+    .ineer{
+        gap: 50px;
+    }
+    .counter-wrap{
+        width: 90%;
+    }
+    .quick-wrap{
+        width: 90%;
+    }
+    .contents{
+        width: 80%;
+    }
+    .third .collection-box a{
+        gap: 30px;
+        padding: 20px;
+    }
+}
+/* ------------------------------ 2000 ------------------------------------> */
+@media (max-width : 2000px) {
+    .fourth .notice ul li{
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="T.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="main-header">
+            <div class="main-header-page">
+                <div class="main-header-top">
+                    <div class="nav-cont">
+                        <div class="main-header-logo">
+                            <a href="#">
+                                <img src="img/logo_tworld.png" alt="">
+                            </a>
+                        </div>
+                        <div class="main-header-util">
+                            <a href="" class="search">
+                                <span>T world 통합검색</span>
+                            </a>
+                            <a href="" class="login">
+                                <span>로그인</span>
+                            </a>
+                            <a href="" class="join">
+                                <span>SK텔레콤 T아이디 회원가입</span>
+                            </a>
+                        </div>
+                        <div class="main-header-site">
+                            <a href="" class="universe">
+                                <span>T우주</span>
+                            </a>
+                            <a href="" class="roming">
+                                <span>T roming</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header-bottom">
+                    <div class="nav-cont">
+                        <div class="main-header-menu">
+                            <div class="item">
+                                <a href="">
+                                    <img src="img/logo_tmembership.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">혜택 브랜드</a>
+                            </div>
+                            <div class="item">
+                                <a href="">혜택 프로그램</a>
+                            </div>
+                            <div class="item">
+                                <a href="">나의 T멤버십</a>
+                            </div>
+                            <div class="item">
+                                <a href="">T멤버십 안내</a>
+                            </div>
+                        </div>
+                        <div class="main-header-hamburger">
+                            <div class="hamburger-util">
+                                <a href="#">
+                                    <button class="icon-hamburger">
+                                        <span>전체메뉴</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/img1.jpg" alt=""><div class="btn-box"><a href="#" class="bn-link">자세히 보기</a></div></div>
+                    <div class="swiper-slide"><img src="img/img2.jpg" alt=""><div class="btn-box"><a href="#" class="bn-link">자세히 보기</a></div></div>
+                    <div class="swiper-slide"><img src="img/img3.jpg" alt=""><div class="btn-box"><a href="#" class="bn-link">자세히 보기</a></div></div>
+                    <!-- <div class="swiper-slide"><a href=""><img src="img/img1.jpg" alt=""><button>자세히 보기</button></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/img2.jpg" alt=""><button>자세히 보기</button></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/img3.jpg" alt=""><button>자세히 보기</button></a></div> -->
+                </div>
+                <div class="swiper-slide-pagenation-fill">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="swiper-bullet">
+                    <div class="swiper-pagination">
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+                    <span class="pause">재생</span>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="tit-box">
+                <h2>새로워진 T멤버십</h2>
+            </div>
+            <ul class="new-info">
+                <li>
+                    <a href="">
+                        <i><img src="img/img_new_info01.png" alt=""></i>
+                        <strong>달달하게 즐기는 T우주</strong>
+                        <p>
+                            내 라이프 스타일에 딱 맞는 서비스를 구독해 보세요. 보고 듣고 즐기는 콘텐츠부터 생활을 채워 주는 쇼핑, 렌털까지. T 우주에서는 새로운 일상이 펼쳐집니다.                          
+                        </p >
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i><img src="img/img_new_info02.png" alt=""></i>
+                        <strong>내 맘대로 모으고 쓰는 T멤버십</strong>
+                        <p>
+                            혜택 브랜드를 이용할수록 T 플러스포인트가 쌓여요.
+                            <br>
+                            적립한 T 플러스포인트를 원하는 곳에서 현금처럼 사용하세요.
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i><img src="img/img_new_info03.png" alt=""></i>
+                        <strong>매일 받는 혜택 미션</strong>
+                        <p>
+                            매일 쏟아지는 다양한 미션에 도전하고, 포인트와 푸짐한 경품을 받아 보세요.
+                            <br>
+                            출석 체크, 룰렛 게임, 혜택 스탬프 미션부터 클릭만 해도 적립되는 포인트까지 매일 매일 바뀌는 T 멤버십 미션을 즐겨 보세요.
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a href="" class="bar-evt">
+            <div class="evt-tit">
+                달달하게 즐기는 혜택 라이프<strong> 확 달라진 T 멤버십 안내</strong>
+            </div>
+        </a>
+        <div class="card-banner">
+            <strong>아직, T 멤버십 카드를 신청하지 않으셨나요?</strong>
+            <button class="card">카드 신청하기</button>
+        </div>
+        <div class="container3">
+            <div class="tit-box">
+                <h2>혜택 브랜드</h2>
+                <span>T 멤버십만의 풍성한 브랜드 혜택을 만나보세요.</span>
+            </div>
+            <div class="benefit-box">
+                <ul class="benefit-tab">
+                    <li id="41"><span class="blind">EAT뭐먹지?</span></li>
+                    <li id="42"><span class="blind">BUY뭐사지?</span></li>
+                    <li id="43"><span class="blind">PLAY뭐하지?</span></li>
+                </ul>
+                <div class="benefit-cont current">
+                    <ul>
+                        <li>
+                            <a href="" class="brand-link">
+                                <i>
+                                    <img src="img/베스킨라빈스.png" alt="">
+                                </i>
+                            </a>
+                            <strong>베스킨라빈스</strong>
+                            <a href="" class="cate-link">
+                                <span>카페/아이스크림
+                                    <img src="img/arr_right_gray.png" alt="">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="brand-link">
+                                <i>
+                                    <img src="img/파리바게트.png" alt="">
+                                </i>
+                            </a>
+                            <strong>파리바게트</strong>
+                            <a href="" class="cate-link">
+                                <span>베이커리
+                                    <img src="img/arr_right_gray.png" alt="">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="brand-link">
+                                <i>
+                                    <img src="img/아웃백.png" alt="">
+                                </i>
+                            </a>
+                            <strong>아웃백</strong>
+                            <a href="" class="cate-link">
+                                <span>외식
+                                    <img src="img/arr_right_gray.png" alt="">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="brand-link">
+                                <i>
+                                    <img src="img/뚜레주르.png" alt="">
+                                </i>
+                            </a>
+                            <strong>뚜레쥬르</strong>
+                            <a href="" class="cate-link">
+                                <span>베이커리
+                                    <img src="img/arr_right_gray.png" alt="">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="brand-link">
+                                <i>
+                                    <img src="img/공차.png" alt="">
+                                </i>
+                            </a>
+                            <strong>공차</strong>
+                            <a href="">
+                                <span>커피/아이스크림
+                                    <img src="img/arr_right_gray.png" alt="">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="brand-link">
+                                <i>
+                                    <img src="img/도미노.png" alt="">
+                                </i>
+                            </a>
+                            <strong>도미노피자</strong>
+                            <a href="" class="cate-link">
+                                <span>피자/치킨
+                                    <img src="img/arr_right_gray.png" alt="">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="" class="mor-bar">더보기<img src="img/arr_right_violet.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- <script type="text/x-jsrendet" id="brand-render-tmpl">
+            <li>
+                <a href="" class="brand-link" id="{{:id}}">
+                    <i><img src="{{:logoimgUrl}}" alt="{{:name}}"></i>
+                    <strong>{{:name}}</strong>
+                </a>
+                <a href="javaScript:void(0)" class="cate-link"><span id="{{:mcategoryid}}">
+                    {{:mcategoryid}}<img src="https://cdn.sktmembership.co.kr/mps.pc/resources/img/common/arr_right_gray.png">
+                </span></a>
+            </li>
+        </script> -->
+        <div class="enjoy">
+            <div class="container4">
+                <div class="tit-box">
+                    <h2>T 멤버십 즐길거리</h2>
+                    <span>T 멤버십에서 준비한 다양한 혜택프로그램을 사용해보세요.</span>
+                </div>
+                <ul class="enjoy-list">
+                    <li>
+                        <a href="#"></a>
+                        <i>
+                            <img src="img/Tday.png" alt="">
+                        </i>
+                        <span>T day</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                            <i>
+                                <img src="img/vip pick.png" alt="">
+                            </i>
+                            <span>VIP PICK</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                            <i>
+                                <img src="img/무비.png" alt="">
+                            </i>
+                            <span>무비</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                            <i>
+                                <img src="img/여행.png" alt="">
+                            </i>
+                            <span>글로벌/국내여행</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container5">
+            <div class="tit-box">
+                <h2><a href="">T 우주</a></h2>
+                <span>T 우주에서는 다양한 서비스를 구독할 수 있어요.</span>
+            </div>
+            <ul class="subs-list">
+                <li>
+                    <i>
+                        <img src="img/ico_subs01.png" alt="">
+                    </i>
+                    <p>
+                        <em>매일 내 취향에 맞는 음악</em>
+                        <strong>FLO</strong>
+                        <span>월 7,600원</span>
+                    </p>
+                </li>
+                <li>
+                    <i>
+                        <img src="img/ico_subs02.png" alt="">
+                    </i>
+                    <p>
+                        <em>당신의 일상을 꽃내음으로</em>
+                        <strong>꾸까</strong>
+                        <span>7,000원</span>
+                    </p>
+                </li>
+                <li>
+                    <i>
+                        <img src="img/ico_subs03.png" alt="">
+                    </i>
+                    <p>
+                        <em>프리미엄 콘텐츠 포털</em>
+                        <strong>WAYVE</strong>
+                        <span>월 7,900원</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="dalnara-md">
+            <div class="container6">
+                <div class="tit-box">
+                    <h2>T 멤버십 모바일로 즐기기</h2>
+                    <span>스마트폰 사용 고객이시라면! 더욱 간편하게 T 멤버십 혜택을 누리세요!</span>
+                </div>
+                <ul class="link-list">
+                    <li>
+                        <a href=""><img src="img/ico_mb_bn01.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/ico_mb_bn02.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/ico_mb_bn03.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/ico_mb_bn04.png" alt=""></a>
+                    </li>
+                </ul>
+                <a href="#" class="topbtn"></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="T.js" defer></script>
+</html>

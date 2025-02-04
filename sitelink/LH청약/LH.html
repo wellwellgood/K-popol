@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+     <link rel="stylesheet" href="LH.css">
+     <link rel="stylesheet" href="icon.css">
+     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+     <script src="http://code.jquery.com/jquery-latest.js"></script>
+     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="LH.js"></script>
+    <title>LH청약플러스</title>
+</head>
+<body>
+    <header class="tophead">
+        <h1 class="logo">
+            <a href="#"><img src="이미지/logo.png" alt="LH청약+"></a>
+        </h1>
+        <div class="callcenter">
+            <h3>콜센터
+                <strong data-id="callCenterTelNo" style="color: #a2382f;">1600-1004</strong>
+            </h3>
+            <p>
+                <span style="display: block;color: #777;">평일 09:00~18:00</span>
+                <span style="display: block;color: #777;">점심시간 12:00~13:00</span>
+                <span style="display: block;color: #777;">토,일 공휴일 휴무</span>
+            </p>
+        </div>
+    </header>
+    <container>
+        <div class="Quickmenu">
+            <a type="toggle" class="toggle">퀵메뉴 열고/닫기</a>
+            <ul class="Quiclist">
+                <li><a href="#"><i class="liuser" aria-hidden="true"></i>로그인</a></li>
+                <li><a href="#"><i class="lifile" aria-hidden="true"></i>증명서발급</a></li>
+                <li><a href="#"><i class="lilank" aria-hidden="true"></i>예비입주자<br>순위조회</a></li>
+                <li><a href="#"><i class="liimenu" aria-hidden="true"></i>방문한메뉴</a></li>
+                <ul class="null"><a href="">공고문</a></ul>
+            </ul>
+
+        </div>
+        <div class="container">
+            <div class="slogan">
+                <img src="이미지/total_slogan01.png" alt="">
+                <img src="https://apply.lh.or.kr/images/web/main/main/ci_newhome.svg" alt="">
+                <img src="이미지/total_slogan02.png" alt="">
+            </div>
+        </div>
+        <div class="searchmap">
+            <fieldset>
+                <div class="search">
+                    <input type="search" placeholder="메뉴, 공고, 관심지역을 검색해보세요" style="ime-mode:active" onfocus="this.placeholder=''" onblur="this.placeholder='메뉴, 공고, 관심지역을 검색해보세요'">
+                    <a href="" class="searchbar">
+                        <i class="searchicon"></i>
+                        <em style="font-size: 0;">통합검색버튼</em>
+                    </a>
+                </div>
+            </fieldset>
+        </div>
+        <section class="section1 container">
+            <div class="conwrap">
+                <div class="maincon">
+                    <ul>
+                        <li class="subscription">
+                            <a href="#">
+                                <p>
+                                    <img src="이미지/ico_link_apply.png" alt="">
+                                    <strong>청약</strong>
+                                </p>
+                                <span>
+                                    <strong>청약</strong>
+                                    <em>바로가기</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="advance">
+                            <a href="#">
+                                <p>
+                                    <img src="이미지/ico_link_pre.png" alt="">
+                                    <strong>사전청약</strong>
+                                </p>
+                                <span>
+                                    <strong>사전청약</strong>
+                                    <em>바로가기</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="estatemap">
+                            <a href="#">
+                                <p>
+                                    <img src="이미지/ico_link_land.png" alt="">
+                                    <strong>부동산맵</strong>
+                                </p>
+                                <span>
+                                    <strong>부동산맵</strong>
+                                    <em>바로가기</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="client">
+                            <a href="#">
+                                <p>
+                                    <img src="이미지/ico_link_mbr.png" alt="">
+                                    <strong>고객서비스</strong>
+                                </p>
+                                <span>
+                                    <strong>고객서비스</strong>
+                                    <em>바로가기</em>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottomcon">
+                    <ul>
+                        <li><a href="" class=""><span class="icon1"></span>임대주택</a></li>
+                        <li><a href="" class=""><span class="icon2"></span>분양주택</a></li>
+                        <li><a href="" class=""><span class="icon3"></span>토지</a></li>
+                        <li><a href="" class=""><span class="icon4"></span>상가</a></li>
+                        <li><a href="" class=""><span class="icon5"></span>주택매도</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="schedule">
+                <div class="todaysch">
+                    <h3>오늘의 청약 일정</h3>
+                    <a href="" class="all">전체일정보기</a>
+                </div>
+                <div class="box">
+                    <div class="ing">
+                        <h4>접수</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p>임대주택</p>
+                                    <span class="spaning1">11건</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>분양주택</p>
+                                    <span class="spaning2">2건</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>토지</p>
+                                    <span class="spaning3">0건</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>상가</p>
+                                    <span class="spaning4">1건</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="end">
+                        <h4>당첨/낙점자 발표</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p>임대주택</p>
+                                    <span class="spaning1">6건</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>분양주택</p>
+                                    <span class="spaning2">0건</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>토지</p>
+                                    <span class="spaning3">0건</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>상가</p>
+                                    <span class="spaning4">5건</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </container>
+    <footer>
+        <div class="mainfooter">
+            <div class="footcon">
+                <img src="이미지/vision_copy_wide.png" alt="" style="margin-bottom: 1rem; order: 1; height: 34px;">
+                <div class="footspan">
+                    <p class="footlogo">
+                        <img src="이미지/footer_logo.png" alt="">
+                    </p>
+                    <address>
+                        <span>52852  경상남도 진주시 충의로 19 (충무공동)</span>
+                    </address>
+                    <p class="copy">Copyright 2023 korea land & housing corporation all rights reserved.</p>
+                </div>
+                <p class="wa">
+                    <img src="이미지/img_WA_Mark.png" alt="">
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

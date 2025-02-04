@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="vidigo.css">
+    <title>vidigo</title>
+</head>
+<body>
+    <div id="root">
+        <div class="content">
+            <div class="HeaderFixedTop">
+                <header class="nav">
+                    <div class="headerTop">
+                        <div class="flex">
+                            <a href="" class="navimg"><img src="img/vidigo-logo-w.png" alt=""></a>
+                            <nav>
+                                <ul>
+                                    <a href=""><span>서비스 소개</span></a>
+                                    <a href=""><span>주요 기능</span></a>
+                                    <a href=""><span>고객 지원</span></a>
+                                    <a href=""><span>이벤트</span></a>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="flex">
+                            <button class="btn1">서비스 무료 체험</button>
+                            <a href="" class="login">로그인</a>
+                            <button class="btn2">
+                                <img src="img/hamburger.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </header>
+            <div id="main">
+                <div class="bannerbar">
+                    <div class="inner">
+                        <div class="banner" style="background: linear-gradient(to left, rgb(255, 65, 248), rgb(64, 97, 208), rgb(0, 255, 161));">
+                            <div class="txt">
+                                카카오톡으로 간편하게 영상을 요약하고 다양한 이벤트 소식을 받고 싶다면?
+                            </div>
+                            <div class="kakao">
+                                <img src="img/banner-kakao.png" alt="">
+                                <span>친구 추가하고 혜택 알림 받기</span>
+                            </div>
+                            <button><img src="img/icon-menu-off.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-container">
+                    <video autoplay loop playsinline class="video">
+                        <source src="https://vidigo.ai/files/video/vidigoH_main-video_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="center-content">
+                    <div class="center-tit">
+                        <div>AI분석으로 쉽고 간편하게</div>
+                        <div>영상 요약 & 숏폼 자동 제작!</div>
+                    </div>
+                    <div class="center-sub">
+                        VidiGo-Highlight로 나만의 하이라이트 영상을 제작해 보세요!
+                    </div>
+                    <div class="url-content">
+                        <div class="url-box">
+                            <div class="url-container"> 
+                                <div class="url-inner">
+                                    <div class="search-box">
+                                        <img src="img/icon-youtube.png" alt="">
+                                            <input class placeholder="URL을 입력해 주세요." value>
+                                            <div class="search-btn">
+                                                <button class="make">제작하기</button>
+                                            </div>
+                                        </img>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="url-container-hide">
+                                <ul class="url-inner-hide">
+                                    <li>
+                                        <input type="file" id="fileinput" style="display: none;" accept="file/*">
+                                        <p id="filename"></p>
+                                        <button onclick="document.getElementById('fileinput').click()">
+                                            <div>
+                                                <img src="img/icon-pc-file.png" alt="">
+                                            </div>
+                                            <span>PC 파일</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <input type="file" id="fileinput" style="display: none;" accept="audio/*">
+                                        <button onclick="document.getElementById('fileinput').click()">
+                                            <div>
+                                                <img src="img/icon-audio-file.png" alt="">
+                                            </div>
+                                            <span>오디오 파일</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <script>
+                                document.getElementById('fileinput').addEventListener("change" , function(){
+                                    let file = this.files[0];
+                                    if(file){
+                                        document.getElementById("filename").textContent = "선택한 파일" +  file.name;
+                                    } else{
+                                        document.getElementById("filename").textContent = "선택된 파일이 없습니다.";
+                                    }
+                                });
+
+                                function uploadfile(){
+                                    let fileinput = document.getElementById("fileinput");
+                                    let file = input.file.files[0];
+
+                                    let forData = new forData();
+                                    formData.append("file", file);
+                                    fetch("vidigo.php", {
+                                        method: "POST",
+                                        body: formData
+                                    })
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        document.getElementById("uploadStatus").textContent = data;
+                                    })
+                                    .catch(error => {
+                                        document.getElementById("uploadStatus").textContent = "업로드 실패: " + error;
+                                    });
+                                }
+                            </script>
+                            <button class="change">
+                                <img src="img/icon-change.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="guide">
+                            <img src="img/icon-guide-modal.svg" alt="">
+                            <span>영상 제작 가이드</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <footer class="text">
+                <p>본 사이트는 클론코딩으로 상업적이용과는 무관함을 알려드립니다.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="vidigo.js" defer></script>
+</body>
+</html>
