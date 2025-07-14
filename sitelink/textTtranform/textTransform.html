@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="textTranform.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="font_setting">
+        <div class="font_size">
+            <form>
+                <div class="font_size_adjust">
+                    <button aria-label="글자 크기를 줄이다" type="button" id="decrease_font_button"> -
+                    </button>
+                    <label for="font_size_display" class="hidden">현재 글자 크기:</label>
+                    <input type="text" id="font_size_display" readonly="">
+                    <button type="button" id="increase_font_button">
+                        <span class="hidden"></span> +
+                    </button>
+                </div>
+                <span id="font_size_min_alert" aria-describedby="decrease_font_button">최소치입니다</span>
+
+                <div class="font_size_direct">
+                    <button type="button" id="set_font_1rem_button">
+                        <span class="hidden"></span> 1rem
+                    </button>
+                    <button type="button" id="reset_font_button">
+                        <span class="hidden"></span> reset
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="font_family">
+            <form>
+                <fieldset>
+                    <h3><legend>폰트 스타일</legend></h3>
+                    <div class="radio_buttons">
+                        <label for="KumarOne">
+                            <input type="radio" id="KumarOne" name="font_family_select" value="Kumar One, serif" checked>
+                            <span>KumarOne</span>
+                        </label>
+                        <label for="Roboto">
+                            <input type="radio" id="Roboto" name="font_family_select" value="Roboto">
+                            <span>Roboto</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="changLang">
+            <form>
+                <fieldset>
+                    <h3><legend>Language</legend></h3>
+                    <div class="lang_buttons">
+                        <label for="en">
+                            <input type="radio" id="en" name="Lang_select" value="en">
+                            <span>English</span>
+                        </label>
+                        <label for="ko">
+                            <input type="radio" id="ko" name="Lang_select" value="ko" checked>
+                            <span>Korean</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <main class="center" id="main_content">
+        <section class="content_text" tabindex="0" style="font-style: 1.1rem;">
+            <h1 id="title">안녕하세요!</h1>
+            <p id="description">이것은 한글 버전입니다.</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto similique eos alias, necessitatibus perferendis fugit dolore debitis sint, quod labore voluptates cum facere consequuntur doloribus omnis provident minus dignissimos tempore!</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+            <p id="text" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur debitis soluta quaerat? Adipisci, vitae eum ab rerum voluptates, cumque ad labore ipsum, esse corporis id! In obcaecati non voluptate</p>
+        </section>
+    </main>
+    <script src="textTransform.js"></script>
+</body>
+
+</html>

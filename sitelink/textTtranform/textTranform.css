@@ -1,0 +1,136 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+
+
+:lang(en){
+    word-break: auto-phrase;
+    font-feature-settings: "palt";
+}
+.main * {
+    font-size: 1rem;
+}
+main{
+    font-size: 1.2rem;
+    background-color: #feb;
+    border-radius: 2vmax;
+    margin: 1rem auto !important;
+    border: 2px solid rgba(200, 170, 150, 0.5);
+    overflow: hidden;
+}
+.font_setting{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50% , -50%);
+    border: 1px solid #666666;
+    background: #fff;
+    min-width: 16rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+.fontsize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    aspect-ratio: 1/1;
+    border: 1px solid #999;
+    height: 3rem;
+    line-height: 3rem;
+}
+button:hover{
+    background: #777;
+}
+.hidden{
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+}
+#font_size_display{
+    border: 1px solid #666;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    max-width: 5rem;
+    max-height: 3rem;
+}
+#font_size_min_alert{
+    display: none;
+}
+.font_size_direct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    gap: 25px;
+}
+.radio_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+label:has(input[type="radio"]) {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.25rem 0.5rem;
+    gap: 0.2rem;
+    text-align: center;
+    border: 1px solid rgba(200, 170, 150, 0.5);
+    background: #feb;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+label input[type="radio"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 0%;                                                               
+    height: 0%;
+}
+label input span{
+    text-align: center;
+}
+.font_family{
+    border: none;
+}
+.center{
+    box-sizing: border-box;
+}
+#text{
+    font-family: sans-serif;
+}
+
+.KumarOne{
+    font-family: "Kumar One", serif;
+}
+.Roboto{
+    font-family: "Roboto", serif;
+}
+
+.lang_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}

@@ -10,7 +10,7 @@ body{
     max-width: 100%;
     min-height: 100vh;
     display: flex;
-    background: url(img/2151011516.jpg) center / cover no-repeat;
+    background: #646464;
     overflow: hidden;
     flex-direction: row;
 }
@@ -28,17 +28,21 @@ span{
     border-radius: 30px;
     border: 1px solid #000;
     margin: 12px;
+    padding: 10px;
 }
 .box1{
     position: relative;
-    border-radius: 30px;
-    border: 3px solid rgba(0 , 0 , 0, 1);
+    border-radius: 30px; /* ✅ 둥근 모서리 적용 */
+    border: 1px solid transparent; /* ✅ 투명한 테두리 */
+    background: linear-gradient(#646464,#646464) padding-box, /* ✅ 내부 배경 */
+                linear-gradient(-45deg, rgba(255, 159, 243, 1), rgba(0, 119, 255, 1), rgba(244, 255, 255, 1), rgba(255, 159, 243, 1), rgba(51, 204, 255, 1)) border-box;
     margin: 5px;
     transition: 0.3s linear;
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 98vh;
+    width: 16%;
+    height: 96vh;
+    margin-top: 2vh;
 }
 .iconbox{
     position: relative;
@@ -68,6 +72,7 @@ span{
     width: 100%;
     text-align: center;
 }
+
 .infobox h3 span{
     border: none;
     margin: 5px;
@@ -93,6 +98,7 @@ span{
     font-family: "Doto", sans-serif;
     overflow: hidden;
     color: #fff !important;
+    margin-bottom: 50px;
 }
 .ContactMe{
     position: absolute;
@@ -102,13 +108,13 @@ span{
 
 .box2{
     border-radius: 30px;
-    border: 3px solid ;
+    background: linear-gradient(-45deg, rgba(255, 159, 243, 0.7), rgba(0,119,255 ,0.7) ,rgba(244,255,255,0.7),rgba(255,159,243,0.7),rgba(51,204,255,0.7));
     margin: 5px;
     transition: 0.3s linear;
     position: relative;
-    /*background: url(img/v960-ning-05.jpg) top / cover no-repeat;*/
     width: 70%;
-    height: 98vh;
+    height: 96vh;
+    margin-top: 2vh;
     z-index: 99;
     overflow: hidden;
 }
@@ -218,17 +224,22 @@ span{
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    border: 1px solid #000;
+    border: 5px solid #eee;
     border-radius: 10px;
-    background: transparent;
+    background: black;
     opacity: 1;
     transition: 1s;
     overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);  /* 기본 box-shadow 설정 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 
+    0 10px 20px rgba(0, 0, 0, 0.7); /* 입체감 */
 }
 
 .frame.active {
-    box-shadow: 0 0 25px #fff; /* 기본 box-shadow 색상 */
+    box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.2);
     border: 3px ridge #fff;
     opacity: 1;
     transition: 1s;
@@ -259,6 +270,28 @@ span{
     height: 100%;
     object-fit: cover;
 }
+.close_swiper {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40px; /* 크기 키움 */
+    height: 40px;
+    color: #fff;
+    border: none;
+    font-size: 18px; /* 글자 크기 키움 */
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+/* X 버튼 내부 텍스트 */
+.close_swiper::before {
+    content: "X";
+    display: block;
+}
 .clickme{
     display: flex;
     align-items: center;
@@ -267,7 +300,7 @@ span{
 }
 .clickme h4{
     font-size: 12px;
-    color: #fff;
+    color: lime;
 }
 .clickme.content{
     visibility: hidden;
@@ -280,30 +313,32 @@ span{
 .clickme img{
     width: 30px;
     height: 30px;
+    background: #000;
+    border-radius: 100%;
 }
 .textarea{
     border: none;
     position: relative;
     top: 100%;
-    left: 65%;
+    left: 35%;
     display: block;
-    width:  33%;
+    width:  60%;
     font-size: 18px;
     text-align: right;
     color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-color: #111;
     padding: 10px;
     transition: 0.3s linear;
 }
 .textarea:hover{
-    color: #000;
+    color: #fff;
     transition: 0.3s linear;
 }
 .textarea .text1{
     position: relative;
     font-size: 34px;
-    font-family: "Song Myung", serif;
+    /* font-family: "Song Myung", serif; */
 }
 .textarea .text2{
     position: relative;
@@ -320,23 +355,48 @@ span{
     align-items: center;
     justify-content: center;
     width: 90%;
-    height: 90vh;
-    margin-left: 5%;
+    max-height: 95vh;
+    margin: 0% 5%;
     padding: 20px;
-    z-index: -99;
+    z-index: 1;
     overflow: scroll;
-    scrollbar-width: none;
+    scrollbar-color: pink;
+    opacity: 0;
+    transition: opacity 0.5s ease , transform 0.5s ease;
+    overflow-y: auto;
 }
 
+.board::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.board::-webkit-scrollbar-button {
+    display: none;
+}
+
+.board::-webkit-scrollbar-thumb{
+    background-color: purple;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.board::-webkit-scrollbar-track{
+    background-color: rgba(255, 159, 243, 0.5);
+}
+.board.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .board .site{
     /* display: flex; */
     flex-direction: row;
     position: relative;
     list-style: none;
     border-radius: 10px;
-    background: #A07855;
+    /* background: #A07855; */
     margin-bottom: 20px;
     transition: box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 1);
 }
 .board .site:hover{
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 1);
@@ -365,6 +425,10 @@ span{
     background-position: top;
     width: 100%;
 }
+.board .site:last-child{
+    margin-bottom: 10px;
+}
+
 .board .site img:hover{
     transform: scale(1.02);
     transition: transform .5s ease;
@@ -378,7 +442,7 @@ span{
     color: #000;
     font-weight: bold;
     font-family:  "Noto Sans KR", sans-serif;
-    background: #A07855;
+    /* background: #A07855; */
 }
 
 .skillpage{
@@ -396,7 +460,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;;
+    flex-direction: column;
 }
 .development{
     width: 100%;
@@ -405,10 +469,9 @@ span{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    /* border: 1px solid #fff; */
+    border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #A07855;
     transition: box-shadow 0.2s ease;
 }
 .development:hover{
@@ -426,10 +489,15 @@ span{
     width: 50px;
     height: 50px;
     padding: 10px;
+    gap: 5px;
 }
 .development:nth-child(3) img{
-    width: 150px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
+}
+.development:nth-child(4) img{
+    width: 100px;
+    height: 50px;
 }
 .development:nth-child(3)span{
     margin-top: 30px;
@@ -442,7 +510,7 @@ span{
     height: 50px;
 }
 .development:nth-child(3) ul li img{
-    width: 150px;
+    width: 50px;
     height: 50px;
 }
 .development span{
@@ -461,15 +529,16 @@ span{
     font-weight: bold;
 }
 
-
-
 .box3{
     position: relative;
     width: 70px;
-    height: 98vh;
-    border: 3px solid #000;
-    border-radius: 30px;
-    margin: 5px;
+    height: 96vh;
+    top: 1vh;
+    border-radius: 30px; /* ✅ 둥근 모서리 적용 */
+    border: 1px solid transparent; /* ✅ 투명한 테두리 */
+    background: linear-gradient(#646464,#646464) padding-box, /* ✅ 내부 배경 */
+                linear-gradient(-45deg, rgba(255, 159, 243, 1), rgba(0, 119, 255, 1), rgba(244, 255, 255, 1), rgba(255, 159, 243, 1), rgba(51, 204, 255, 1)) border-box;
+    margin: 10px;
     overflow: hidden;
 }
 .clock{
@@ -477,13 +546,12 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    color: #fff;
     text-align: left;
     border-radius: 30px;
+    color: #fff;
     height: 70px;
     font-size: 28px;
-    animation: Time 10s linear infinite;
+    animation: Time 30s linear infinite;
     word-break: keep-all;
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -498,19 +566,19 @@ span{
 }
 
 
-
-
-.container{
+.container {
     width: 15%;
-    height: 98vh;
-    border: 3px solid #000;
-    border-radius: 30px;
+    height: 96vh;
+    margin-top: 2vh;
+    border-radius: 30px; /* ✅ 둥근 모서리 적용 */
+    border: 1px solid transparent; /* ✅ 투명한 테두리 */
+    background: linear-gradient(#646464,#646464) padding-box, /* ✅ 내부 배경 */
+                linear-gradient(-45deg, rgba(255, 159, 243, 1), rgba(0, 119, 255, 1), rgba(244, 255, 255, 1), rgba(255, 159, 243, 1), rgba(51, 204, 255, 1)) border-box;
     transition: all 0.3s linear;
     overflow: hidden;
 }
 .container.hover{
     width: 5%;
-    transform-origin: 100% 100%;
 }
 .container .h1{
     position: relative;
@@ -518,7 +586,7 @@ span{
     left: 50%;
     transform: translate(-50% , 3px);
     font-size: 24px;
-    padding-top: 5px;
+    padding: 5px;
     text-align: center;
     font-family:"Doto", sans-serif;
     font-weight: bold;
@@ -527,17 +595,18 @@ span{
     color: transparent;
     /* background-color: #2754B3; */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-color: #fff;
     border-radius: 3px;
 }
 .hidebtn{
     position: fixed;
-    bottom: 14px;
-    right:  5px;
+    bottom: 25px;
+    right:  7px;
     width: 30px;
     height: 30px;
     border: none;
     transition: 0.3s linear;
+    color: #fff;
 }
 .hidebtn.hide{
     position: fixed;
@@ -578,59 +647,58 @@ span{
 }
 .box4{
     margin: 5px;
+    padding: 15px;
     transition: 0.3s linear;
     position: relative;
-    margin-bottom: 1vh;
     border: none;
+    backdrop-filter: blur(3px);
 }
 .SNS{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border: none;
     height: auto;
     margin-top: 10px;
+    width: 100%;
+}
+.SNS div{
+    /* width: 100%; */
+    height: 87px;
+}
+.SNS h1{
+    font-size: 16px;
+}
+.SNS span{
+    font-size: 14px;
 }
 .SNS a{
     display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 1px solid #000;
+    margin: 12px;
+    padding: 10px;
+    font-size: 12px;
 }
-.SNS a:nth-of-type(1)::before{
-    content: "";
-    background: url(img/icons8-kakao-talk-100.png) center /cover no-repeat;
-    width: 80px;
-    height: 90px;
-    margin: 10px 0px;
-}
-.SNS a:nth-of-type(2)::before{
-    content: "";
-    background: url(img/icons8-instagram-100.png) center / cover no-repeat;
-    width: 80px;
-    height: 90px;
-    margin: 10px 0px;
-}
-.SNS a:nth-of-type(3)::before{
-    content: "";
-    background: url(img/icons8-email-100.png) center / cover no-repeat;
-    width: 80px;
-    height: 90px;
-    margin: 10px 0px;
-}
-.SNS .SNSTX{
-    font-family: "Doto", sans-serif;
-    color: #000;
-    font-weight:900;
-    font-size: 28px;
+.SNS a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transition: 0.3s linear;
 }
 
 
 .box5{
+    position: absolute;
+    bottom: 60px;
     border-radius: 30px;
-    /* border: 3px solid rgba(0, 0 , 0, 1); */
     margin: 5px;
     transition: 0.3s linear;
-    height: 47vh;
-    position: relative;
+    width: 13%;
+    height: 30vh;
+    padding: 0;
 }
 .box5 iframe{
     position: absolute;
@@ -647,5 +715,6 @@ span{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 15px;
+    height: 20px;
+    color: #fff;
 }
