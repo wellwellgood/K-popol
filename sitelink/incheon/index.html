@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="script/fullpage.css" />
+    <script src="script/fullpage.js"></script>
+    <link rel="stylesheet" href="incheon.css">
+    <link rel="stylesheet" href="img/reset.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="font.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <title>인천광역시교육청 화도진도서관 향토·개항자료관</title>
+</head>
+<body>
+    <div class="header">
+        <div class="inner">
+            <h1>
+                <a href="">
+                    <img src="img/logo.svg" alt="">
+                </a>
+            </h1>
+            <div class="top-btn">
+                <a href="" title="인천광역시교육청공공도서관 유투브 바로가기">
+                    <span class="txt-hide">인천광역시교육청공공도서관 유투브 바로가기</span>
+                    <i class="ic-about"></i>
+                </a>
+                <div>
+                    <a href="#menu_o" class="ri-menu-fill" onclick="openNav()">
+                        <span class="txt-hide">메뉴열기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="fp-nav" class="fp-right">
+            <ul>
+                <li>
+                    <a href="#1stPage" class="">
+                        <span class="fp-sr-only">1st page</span>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#2stpage" class="">
+                        <span class="fp-sr-only">2st page</span>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#3stpage" class="">
+                        <span class="fp-sr-only">3st page</span>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#4stPage" class="">
+                        <span class="fp-sr-only">4st page</span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="mynav" class="overlay">
+        <div>
+            <a href="#close_m" class="ri-close-fill closebtn" onclick="closeNav()">
+                <span class="txt_hide">메뉴닫기</span>
+            </a>
+        </div>
+        <div class="overlay-content">
+            <h2>향토개항문화자료관 전체메뉴</h2>
+            <div class="navi-wrap">
+                <div class="navi-depth1">아카이브</div>
+                <div class="navi-depth2">
+                    <a href="">둘러보기</a>
+                    <a href="">유형별보기</a>
+                    <a href="">지역별검색</a>
+                    <a href="">주제별검색</a>
+                    <a href="">시대별검색</a>
+                    <a href="">태그검색</a>
+                    <a href="">고서 원문DB</a>
+                </div>
+            </div>
+            <div class="navi-wrap">
+                <div class="navi-depth1">컬랙션</div>
+                <div class="navi-depth2">
+                    <a href="">이달의 콘텐츠</a>
+                    <a href="">주제별 콘텐츠</a>
+                    <a href="">영상 공간</a>
+                </div>
+            </div>
+            <div class="navi-wrap">
+                <div class="navi-depth1">인천의 역사</div>
+                <div class="navi-depth2">
+                    <a href="">인천의 유래 및 인천 근현대사 연표</a>
+                    <a href="">인천문화생활연표</a>
+                    <a href="">소장도서 목차 DB</a>
+                    <a href="">참고정보원</a>
+                </div>
+            </div>
+            <div class="navi-wrap">
+                <div class="navi-depth1">이용안내</div>
+                <div class="navi-depth2">
+                    <a href="">소개</a>
+                    <a href="">새소식</a>
+                    <a href="">이용규정</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fullpage" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px,0px,0px); transition: transform 700ms;">
+        <div class="section section-bg first fp-section fp-table fp-is-overflow active fp-completely" style="background-color: rgb(255, 255, 255);" data-anchor="1stPage">
+            <div class="fp-overflow" tabindex="-1">
+                <div class="inner">
+                    <div class="search-wrap">
+                        <div class="title">도서, 영상, 도록, 사진 등 다양한 유형의 인천향토문화자료를 찾아보세요.</div>
+                        <form action="searchFrm">
+                            <div class="form-wrap">
+                                <div class="wrap-box">
+                                    <div class="select">
+                                        <div class="select_mate" data-selec-mate="active" data-indx-select="0" data-selec-open="false">
+                                            <label for="sch_detail" class="txt-hide">검색어를 입력하세요</label>
+                                            <select name="sch_detail_sort_1">
+                                                <option value="all">전체</option>
+                                                <option value="contents_kor_name">제목</option>
+                                                <option value="contents_desc">내용</option>
+                                                <option value="s_sno">등록번호</option>
+                                            </select>
+                                            <p class="selecionado_opcion" onclick="open_select(this)" data-n-select="0">전체</p>
+                                            <span onclick="open_select(this)" class="icon_select_mate">
+                                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+                                                    <path d="M0-.75h24v24H0z" fill="none"></path>
+                                                </svg>
+                                            </span>
+                                            <div class="cont_list_select_mate">
+                                                <ul class="cont_select_int" style="height: 0px;">
+                                                    <li data-index="0" data-selec-index="0">전체</li>
+                                                    <li data-index="1" data-selec-index="0">제목</li>
+                                                    <li data-index="2" data-selec-index="0">내용</li>
+                                                    <li data-index="3" data-selec-index="0">등록번호</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <label for="parSrchTxt" class="txt-hide">검색어 입력</label>
+                                        <input type="text" name="parSrchTxt" id="parSrchTxt" placeholder="검색어를 입력하세요">
+                                    </div>
+                                </div>
+                                <div class="search-btn">
+                                    <button class="search" type="submit">
+                                        <i class="ri-search-line"></i>
+                                    </button>
+                                    <a href="" class="datail" title="상세검색">상세<br>검색</a>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="keyword">
+                            <dl>
+                                <dt>추천검색어</dt>
+                                <dd>
+                                    <a href="">인천</a>
+                                    <a href="">1960년인천 풍경</a>
+                                    <a href="">지도</a>
+                                    <a href="" class="point">시장</a>
+                                    <a href="">개항</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="quick-wrap">
+                        <div class="swiper swiper-category">
+                            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); transition-delay: 0ms;">
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-book-2-line"></i></strong><span>간행물</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-image-line"></i></strong><span>그림</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-book-open-line"></i></strong><span>낱장자료</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-camera-2-line"></i></strong><span>사진</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-gallery-view"></i></strong><span>스테레오뷰</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-slideshow-line"></i></strong><span>슬라이드</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-eye-line"></i></strong><span>실물</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-mail-send-line"></i></strong><span>엽서</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-disc-line"></i></strong><span>음반</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-map-2-line"></i></strong><span>지도</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-git-repository-line"></i></strong><span>책</span></a></div>
+                                <div class="swiper-slide swiper-slide-active" role="group" style="margin-right: 10px;"><a href=""><strong><i class="ri-gallery-view"></i></strong><span>파노라마</span></a></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="counter-wrap">
+                        <div>
+                            <span>향토개항문화자료</span>
+                            <strong>13065</strong>
+                        </div>
+                        <div>
+                            <span>도서</span>
+                            <strong>11185</strong>
+                        </div>
+                        <div>
+                            <span>비도서</span>
+                            <strong>1880</strong>
+                        </div>
+                        <script>
+                            
+                        (function($) {
+                            $.fn.countTo = function(options) {
+                                // merge the default plugin settings with the custom options
+                                options = $.extend({}, $.fn.countTo.defaults, options || {});
+                            
+                                // how many times to update the value, and how much to increment the value on each update
+                                var loops = Math.ceil(options.speed / options.refreshInterval),
+                                    increment = (options.to - options.from) / loops;
+                            
+                                return $(this).each(function() {
+                                    var _this = this,
+                                        loopCount = 0,
+                                        value = options.from,
+                                        interval = setInterval(updateTimer, options.refreshInterval);
+                                
+                                    function updateTimer() {
+                                        value += increment;
+                                        loopCount++;
+                                        $(_this).html(value.toFixed(options.decimals));
+                                    
+                                        if (typeof(options.onUpdate) == 'function') {
+                                            options.onUpdate.call(_this, value);
+                                        }
+                                    
+                                        if (loopCount >= loops) {
+                                            clearInterval(interval);
+                                            value = options.to;
+                                        
+                                            if (typeof(options.onComplete) == 'function') {
+                                                options.onComplete.call(_this, value);
+                                            }
+                                        }
+                                    }
+                                });
+                            };
+                        
+                            $.fn.countTo.defaults = {
+                                from: 0,  // the number the element should start at
+                                to: 100,  // the number the element should end at
+                                speed: 1000,  // how long it should take to count between the target numbers
+                                refreshInterval: 100,  // how often the element should be updated
+                                decimals: 0,  // the number of decimal places to show
+                                onUpdate: null,  // callback method for every time the element is updated,
+                                onComplete: null,  // callback method for when the element finishes updating
+                            };
+                        })(jQuery);			
+
+
+                                $('.counter1').countTo({
+                                    from: 0,
+                                    to: 13065,
+                                    speed: 2500,
+                                    refreshInterval: 30,
+                                    onComplete: function(value) {
+                                        console.debug(this);
+                                    }
+                                });
+                                $('.counter2').countTo({
+                                    from: 0,
+                                    to: 11185,
+                                    speed: 2500,
+                                    refreshInterval: 30,
+                                    onComplete: function(value) {
+                                        console.debug(this);
+                                    }
+                                });
+                                $('.counter3').countTo({
+                                    from: 0,
+                                    to: 1880,
+                                    speed: 2500,
+                                    refreshInterval: 30,
+                                    onComplete: function(value) {
+                                        console.debug(this);
+                                    }
+                                });
+                        </script>
+                    </div>
+                </div>
+                <div class="container_mouse">
+                    <span class="mouse-btn">
+                        <span class="mouse-scroll"></span>
+                    </span>
+                    <span>SCROLL DOWN</span>
+                </div>
+            </div>
+        </div>
+        <div class="section fp-section fp-table fp-is-overflow active fp-completely" data-anchor="2stPage">
+            <div class="fp-overflow" tabindex="-1">
+                <div class="title-wrap">
+                    <h2>이달의 콘텐츠</h2>
+                    <p>
+                        온라인전시회를 통해  인천의 기억을 
+                        <!-- <br> -->
+                        한 겹 더 깊숙히 살펴보세요
+                    </p>
+                </div>
+                <div class="contents">
+                    <div class="swiper main-contents swiper-initialized swiper-horizontal swiper-backface-hidden">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="contents-box">
+                                    <div class="label">
+                                        <span>2024</span>
+                                        <strong>08</strong>
+                                    </div>
+                                    <div class="photo">
+                                        <img src="img/FLL000000XTyHyz7YlQX.jfif" alt="">
+                                    </div>
+                                    <div class="con-txt">
+                                        <a href="">
+                                            <p class="title">송도유원지</p>
+                                        </a>
+                                        <div class="txt">
+									        1930년대 들어 일본은 우리나라에 대한 노골적인 경제 수탈을 시작하였는데 그 하나로 인천-수원-여주에 이르는 수인선을 부설하는 일이었다. 경기도 내륙의 질 좋은 쌀을 인천으로 수송한 다음 일본으로 실어가기 위해서였다. 1937년 마침내 수인선이 개통되자 쌀 이외에도 많은 승객을 유치하기 위한 수단으로 수인선 인근에 월미도를 버금가는 관광지를 개발할 계획을 세우는데 그것이 송도유원지 조성의 이유였다.또 경제적으로, 군사적으로 점점 강대해진 일본은 중국대륙 침탈의 야욕을 채우기 위해 군사적 요충지로 큰 가치를 가지고 있는 월미도를 다시 국방의 요새로  환원하려는 계획을 갖고 있었기 때문이기도 했다. 월미도의 관광시설을 폐쇄하기 위해 눈을 돌린 곳이 송도유원지였던 것이다.
+                                        </div>
+                                        <a href="" class="ri-arrow-right-line">자세히보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="contents-box">
+                                    <div class="label">
+                                        <span>2019</span>
+                                        <strong>09</strong>
+                                    </div>
+                                    <div class="photo">
+                                        <img src="img/FLL000000RbGMg2I00YH.jfif" alt="">
+                                    </div>
+                                    <div class="con-txt">
+                                        <a href="">
+                                            <p class="title">해관문서,인천광역시 문화재자료 제20호</p>
+                                        </a>
+                                        <div class="txt">
+                                            해관은 수출입 화물에 대한 관세사무 등을 맡아보는 행정기관으로 오늘날의 세관과 같다. 우리나라에서의 해관업무는 1883년 6월 16일(음력 5월 12일) 인천해관의 창설을 시초로 하여, 같은 해 10월 31일(음력 10월 1일)에 원산해관, 11월 3일(음력 10월 4일)에 부산해관이 각각 설립됨으로써 시작됐다. 인천해관은 현재의 항동 1가 1번지 현 파라다이스 호텔 동편 공터 부근에 세워졌으며, 창설 당시 인천 해관의 초대 세무사는 영국인 스트리플링(A. B. Stripling)이었다. 본 문서는 인천해관에서 인천감리서로 보낸 13종의 공문서 부분철이다. 2종은 1886년, 10종은 1888년, 1종은 1889년에 작성된 것이다. 각 문서의 발송연월일은 (1) 1886년 7월 초7일 (2) 1886년 7월 초8일 (3) 1888년 3월 7일(음력 정월 25일) (4) 1888년 3월 7일(음력 정월 25일) (5) 1888년 3월 12일 (음력 정월 30일) (6) 1888년 3월 13일 (음력 2월 초1일) (8) 2999년 3월 15일 (음력 2월 초3일) (9) 1888년 3월 15일 (음력 2월 초3일) (10) 1888년 3월 16일 (음력 2월 초4일) (11) 1888년 3월 19일 (음력 2월 초7일) (13) 1889년 5월 27일 등이다. 문서마다 당시 인천해관장 대리 쇠니케(J, F. Schoemicke)의 친필서명과 발송연월일이 적혀 있으며, 제1면의 좌측에는 ‘인천해관 세무사’ 직인이 별도 배접하여 첨부되어 있다. 쇠니케는 스트리플링에 이어 인천해관의 제2대 세무사로 취임한 인물로, 취임기간은 1886년 6월부터 1889년 10월까지였다. 그리고 1889년 11월부터는 총세무사 서리의 직책으로 옮겨 1892년 11월까지 역임한 바 있다. 쇠니케는 인천세무사로 재직하는 동안 고종으로부터 당상관에 해당하는 통정대부(通政大夫)의 품계를 받은 바 있으며, 총세무사 서리 시절에는 호조참판(戶曹參判)의 직함을 부여받기도 하였다. 개항장인 인천, 원산, 부산해관에는 1883년 8월부터 감리서(監理署)가 설치돼 외국과의 통상사무 등을 전담했다. 초기에는 감리서의 책임자인 감리(監理)의 직책을 해당 지역의 부사(府使)가 겸임하여 업무를 수행했는데, 본 문서가 작성될 당시의 ‘인천항통상사무감리(仁川港通商事務監理)’는 인천부사였던 엄세영(1885. 9. 12 ~ 1888. 5. 17), 박제순(1888. 5. 19 ~ 1890. 9. 10) 등이 맡아보고 있었다. 본 문서의 내용은 주로 인천내의 조계문제와 인천항을 출입하는 선박에 대한 관세 및 출입항 문제 등과 관련한 것들이며, 문서 (13)의 경우에는 1887 ~ 1889년간 제물포 조계내의 지가(地價) 중 일부 항목을 정리해 둔 목록으로 첨부문서로 발송됐던 것을 따로 정리하여 철해 둔 것이 아닌가 생각된다.문서의 일부를 한번 살펴보면, 문서 (1)과 (2)는 쇠니케가 인천해관 세무사로 취임한 직후인 1886년 7월에 작성된 것으로 이 중 문서 (2)에는 마포에서 출항한 일본범선 구길환(久吉丸)의 화물목록을 적어서 보낸다는 내용이 적혀있다. 외국선박의 마포진입이 허용된 것은 1884년 3월 12일(음력 2월 15일)부터로, 한국정부는 이 때 인천해관에서 입항수속을 끝내고 소정의 관세를 납부한 범선에 한하여 마포진입을 허용한 바 있다. 188년 5월 8일(음력 4월 14일)부터는 입항조건이 더욱 구체화되어 200톤 이하의 상선에 한해서 마포진입을 허용하되, 입항시에는 우선 인천해관에 수입세 등을 완납하고 선창을 봉쇄한 다음, 그 후에야 비로소 마포 등에 진입하여 해관원의 입회하에 하역 작업을 할 수 있도록 하였다. 그리고 출항시에는 인천해관에서 일단 화물의 유무를 검사하고 수출세 등을 완납한 다음에 선패를 받아 출항토록 하였다. 문서 (2)는 이러한 제도 하에서 인천해관이 검사한 일본 범선의 화물 목록을 인천 감리에게 조회하고 있는 상황을 알려주고 있는 문서이다. 해관문서는 총세무사와 외부간의 왕복 공문서들을 모아 놓은 『해관래함』(海關來函), 『총관공문』(總關公文), 『총관거함』(總關去函), 『총관래신』(總關來申) 등이 있다. 그러나 인천해관에서 발송한 공문서들은 따로 모아진 것이 없고, 다만 위의 자료들이나 외교문서들 속에 첨부되어 남아있을 뿐이며, 그 부본은 아직까지 발견되었다는 보고가 없다. 따라서 이 문서는 인천해관의 업무내용을 알 수 있게 해주는 자료인 동시에, 당시 공문서 부본의 존재를 알려주는 서지적 가치가 있고, 또한 그 희소성에서 문화재적 가치가 인정된다고 볼 수 있겠다.
+                                        </div>
+                                        <a href="" class="ri-arrow-right-line">자세히보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bth-wrap">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-notification"></div>
+                        </div>
+                        <div class="swiper-pagination2">
+                            <span class="swiper-pagination-current">1</span>
+                            <span class="swiper-pagination-total">2</span>
+                        </div>
+                        <span class="swiper-notification"></span>
+                    </div>
+                </div>
+                <div class="more-wrap">
+                    <a href="">이달의 콘텐츠 더보기</a>
+                </div>
+                <div class="container_mouse1">
+                    <span class="mouse-btn">
+                        <span class="mouse-scroll"></span>
+                    </span>
+                    <span>SCROLL DOWN</span>
+                </div>
+            </div>
+        </div>
+        <div class="section section-bg2 third fp-section fp-table fp-is-overflow active fp-completely" style="background-color: rgb(255, 243, 236);" data-anchor="3stPage">
+            <div class="fp-overflow" tabindex="-1">
+                <div class="inner">
+                    <div class="title-wrap">
+                        <h2>컬랙션</h2>
+                        <p>향토개항문화자료관은 곳곳에 산재해 있는 개항 관련 자료들을 발굴하고, 기록문화자료를 집중적으로 수서, 정리, 보존하여, 이용자에게 제공하고 있습니다.</p>
+                        <div class="more-wrap pc">
+                            <a href="">컬랙션 더보기</a>
+                        </div>
+                    </div>
+                    <div class="colletion">
+                        <div class="swiper main-colletion">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide-active">
+                                    <div class="collection-box">
+                                        <a href="">
+                                            <div class="photo">
+                                                <img src="img/col0.jpg" alt="">
+                                            </div>
+                                            <div class="title">
+                                                인천, 바다, 삶
+                                            </div>
+                                            <div class="count">
+                                                <span>15건</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-active">
+                                    <div class="collection-box">
+                                        <a href="">
+                                            <div class="photo">
+                                                <img src="img/col1.jpg" alt="">
+                                            </div>
+                                            <div class="title">
+                                                스테레오뷰 컬랙션
+                                            </div>
+                                            <div class="count">
+                                                <span>21건</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-active">
+                                    <div class="collection-box">
+                                        <a href="">
+                                            <div class="photo">
+                                                <img src="img/col2.jpg" alt="">
+                                            </div>
+                                            <div class="title">
+                                                인천항 풍경
+                                            </div>
+                                            <div class="count">
+                                                <span>29건</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-active">
+                                    <div class="collection-box">
+                                        <a href="">
+                                            <div class="photo">
+                                                <img src="img/col3.jpg" alt="">
+                                            </div>
+                                            <div class="title">
+                                                문학산
+                                            </div>
+                                            <div class="count">
+                                                <span>13건</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="more-wrap modile">
+                        <a href="">컬랙션 더보기</a>
+                    </div>
+                </div>
+                <div>
+            </div>
+                <div class="container_mouse2">
+                    <span class="mouse-btn">
+                        <span class="mouse-scroll"></span>
+                    </span>
+                    <span>SCROLL DOWN</span>
+                </div>
+            </div>
+        </div>
+        <div class="section fourth fp-section fp-table fp-is-overflow active fp-completely" data-anchor="4stPage">
+            <div class="fp-overflow">
+                <div class="inner">
+                    <div class="notice">
+                        <div class="wrap-title">
+                            <h2>새소식</h2>
+                            <p>향토개항문화자료관에서 새소식을 전해드립니다.</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>
+                                    <a href="">[공지] 2024년 향토 홈페이지 개편에 관한 의견조사 안내</a>
+                                </p>
+                                <p>2024-09-09</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="">2024년 하반기 인천학 시민강좌 「우현 고유섭」 운영</a>
+                                </p>
+                                <p>2024-08-09</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="">2024년 상반기 인천학 시민강좌 「인천의 설화를 찾아서」 운영</a>
+                                </p>
+                                <p>2024-01-31</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="">2023년 하반기 인천학 시민강좌 「개항장, 인천의 외국인들」 운영</a>
+                                </p>
+                                <p>2023-08-02</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="">신착자료 안내(2024.09)</a>
+                                </p>
+                                <p>2024-08-29</p>
+                            </li>
+                        </ul>
+                        <div class="more-wrap">
+                            <a href="">전체보기</a>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <div>
+                            <p>향토개항문화자료관 소개</p>
+                            <p>
+                                향토개항문화자료관은 곳곳에 산재해 있는 개항 관련 자료들을 발굴하고, 날로 수집이 어려워지고 있는 개항과 관련된 귀중한 기록문화자료를 집중적으로 수서, 정리, 보존하여, 이용자에게 제공하고 있습니다.
+                                1988년 10월에 개관한 인천광역시교육청화도진도서관은 개관 초부터 참고자료실에 향토자료코너를 마련하여 지역 자료를 수집하였습니다. 향토사학자이신 이훈익, 최성연 선생 등 관심 있는 분들의 자료 기증으로 향토자료 수집의 기틀을 마련하였고, 2000년 7월에는 문화관광부가 지정하는 특화도서관(인천개항자료관) 사업에 선정되어 ‘향토·개항문화자료관’을 개실하고, 인천의 역사자료와 개항기 자료를 본격적으로 발굴하고 수집하게 되었습니다. 4종의 지역신문(인천일보, 경인일보, 기호일보, 인천신문)을 제본하는 등 지역에서 발간되는 자료를 집중적으로 수집하여 다양한 인천 자료와 개항기 원본자료를 소장하고 있습니다.
+                                ‘인천개항자료전시관’은 도서관에서 수집한 자료들 중 개항기의 원본자료만을 한 자리에 모아 인천의 근대역사와 문화를 한 눈에 볼 수 있도록 마련한 상설 전시공간입니다. 인천은 부산에 이어 두 번째로 개항한 항구로 많은 특색을 가지고 있는 도시입니다. 이 곳에 전시된 자료들을 통해 근대시기에 이루었던 도시의 문화와 역사의 풍부한 기억들을 만날 수 있습니다. 인천광역시교육청화도진도서관의 자료들은 바로 인천시민 여러분의 소중한 문화유산이며, 역사의 기록입니다.
+                            </p>
+                            <a href="">소개 더보기 +</a>
+                        </div>
+                        <img src="img/abot-bg.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="incheon.js" defer></script>
+</html>
